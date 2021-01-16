@@ -21,6 +21,9 @@ class Log {
 
   static d(Object object) {
     String data = '\x1B[1;34m $object \x1B[0m';
+    if (!object.toString().endsWith('\n')) {
+      data += '\n';
+    }
     _buffer.write(data);
     print(data);
   }
@@ -39,6 +42,9 @@ class Log {
 
   static e(Object object) {
     String data = '\x1B[1;41;37m $object \x1B[0m';
+    if (!object.toString().endsWith('\n')) {
+      data += '\n';
+    }
     _buffer.write(data);
     print(data);
   }
