@@ -6,13 +6,3 @@ homepage:
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-
-dependencies:
-  termare_view:
-    path: ../../termare-space/termare_view
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-flutter:

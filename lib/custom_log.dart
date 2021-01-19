@@ -1,10 +1,5 @@
 library custom_log;
 
-import 'dart:ui';
-
-import 'package:flutter/material.dart';
-import 'package:termare_view/termare_view.dart';
-
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.
@@ -57,28 +52,6 @@ class Log {
     }
     _buffer.write(data + suffix);
     print(data);
-  }
-
-  static void showLogView(BuildContext context) {
-    TermareController controller = TermareController(
-      theme: TermareStyles.termux.copyWith(
-        cursorColor: Colors.transparent,
-      ),
-    );
-    final Size size = window.physicalSize;
-    final double screenWidth = size.width / window.devicePixelRatio;
-    double screenHeight = size.height / window.devicePixelRatio;
-    controller.setPtyWindowSize(
-      Size(screenWidth, screenHeight),
-    );
-    controller.write(_buffer.toString());
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) {
-        return TermareView(
-          controller: controller,
-        );
-      }),
-    );
   }
 }
 
