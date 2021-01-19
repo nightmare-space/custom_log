@@ -14,38 +14,48 @@ class Calculator {
 class Log {
   static StringBuffer _buffer = StringBuffer();
   static v(Object object) {
-    String data = '\x1B[1;40;37m $object \x1B[0m\n';
-    _buffer.write(data);
+    String data = '\x1B[1;40;37m $object \x1B[0m';
+    String suffix = '';
+    if (!object.toString().endsWith('\n')) {
+      suffix += '\n';
+    }
+    _buffer.write(data + suffix);
     print(data);
   }
 
   static d(Object object) {
-    String data = '\x1B[1;34m $object \x1B[0m';
+    String data = '\x1B[1;44;37m $object \x1B[0m';
+    String suffix = '';
     if (!object.toString().endsWith('\n')) {
-      data += '\n';
+      suffix += '\n';
     }
-    _buffer.write(data);
+    _buffer.write(data + suffix);
     print(data);
   }
 
   static i(Object object) {
-    String data = '\x1B[1;42;37m $object \x1B[0m\n';
-    _buffer.write(data);
+    String data = '\x1B[1;44;37m $object \x1B[0m';
+    String suffix = '';
+    if (!object.toString().endsWith('\n')) {
+      suffix += '\n';
+    }
+    _buffer.write(data + suffix);
     print(data);
   }
 
   static w(Object object) {
-    String data = '\x1B[1;43;37m $object \x1B[0m\n';
+    String data = '\x1B[1;43;37m $object \x1B[0m';
     _buffer.write(data);
     print(data);
   }
 
   static e(Object object) {
     String data = '\x1B[1;41;37m $object \x1B[0m';
+    String suffix = '';
     if (!object.toString().endsWith('\n')) {
-      data += '\n';
+      suffix += '\n';
     }
-    _buffer.write(data);
+    _buffer.write(data + suffix);
     print(data);
   }
 
