@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   termare_view:
-    path: ../../termare-space/termare_view
+    git: https://github.com/termare/termare_view
 
 dev_dependencies:
   flutter_test:
