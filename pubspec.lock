@@ -131,11 +131,9 @@ packages:
   termare_view:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "9896605bc28e8d88f84ebef92ffa8c788e517d91"
-      url: "https://github.com/termare/termare_view"
-    source: git
+      path: "/Users/nightmare/Desktop/termare-space/termare_view"
+      relative: false
+    source: path
     version: "0.0.2"
   test_api:
     dependency: transitive
