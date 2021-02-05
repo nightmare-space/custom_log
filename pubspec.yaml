@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   termare_view:
-    path: /Users/nightmare/Desktop/termare-space/termare_view
+    path: ../../termare-space/termare_view
 
 dev_dependencies:
   flutter_test:
