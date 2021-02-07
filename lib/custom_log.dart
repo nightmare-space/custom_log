@@ -45,7 +45,11 @@ class Log {
 
   static w(Object object) {
     String data = '\x1B[1;43;37m $object \x1B[0m';
-    _buffer.write(data);
+    String suffix = '';
+    if (!object.toString().endsWith('\n')) {
+      suffix += '\n';
+    }
+    _buffer.write(data + suffix);
     print(data);
   }
 
