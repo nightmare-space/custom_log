@@ -12,14 +12,14 @@ class Calculator {
 }
 
 class Log {
-  static StringBuffer _buffer = StringBuffer();
+  static StringBuffer buffer = StringBuffer();
   static v(Object object) {
     String data = '\x1B[1;40;37m $object \x1B[0m';
     String suffix = '';
     if (!object.toString().endsWith('\n')) {
       suffix += '\n';
     }
-    _buffer.write(data + suffix);
+    buffer.write(data + suffix);
     print(data);
   }
 
@@ -29,7 +29,7 @@ class Log {
     if (!object.toString().endsWith('\n')) {
       suffix += '\n';
     }
-    _buffer.write(data + suffix);
+    buffer.write(data + suffix);
     print(data);
   }
 
@@ -39,7 +39,7 @@ class Log {
     if (!object.toString().endsWith('\n')) {
       suffix += '\n';
     }
-    _buffer.write(data + suffix);
+    buffer.write(data + suffix);
     print(data);
   }
 
@@ -49,7 +49,7 @@ class Log {
     if (!object.toString().endsWith('\n')) {
       suffix += '\n';
     }
-    _buffer.write(data + suffix);
+    buffer.write(data + suffix);
     print(data);
   }
 
@@ -59,7 +59,7 @@ class Log {
     if (!object.toString().endsWith('\n')) {
       suffix += '\n';
     }
-    _buffer.write(data + suffix);
+    buffer.write(data + suffix);
     print(data);
   }
 
@@ -75,7 +75,7 @@ class Log {
     controller.setPtyWindowSize(
       Size(screenWidth, screenHeight),
     );
-    controller.write(_buffer.toString());
+    controller.write(buffer.toString());
     Navigator.of(context).push(
       MaterialPageRoute(builder: (_) {
         return TermareView(
