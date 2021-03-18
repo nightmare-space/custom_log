@@ -8,7 +8,7 @@ class Calculator {
 
 class Log {
   static StringBuffer buffer = StringBuffer();
-  static v(Object object) {
+  static void v(Object object) {
     String data = '\x1B[1;40;37m $object \x1B[0m';
     String suffix = '';
     if (!object.toString().endsWith('\n')) {
@@ -18,7 +18,7 @@ class Log {
     print(data);
   }
 
-  static d(Object object) {
+  static void d(Object object) {
     String data = '\x1B[1;44;37m $object \x1B[0m';
     String suffix = '';
     if (!object.toString().endsWith('\n')) {
@@ -28,7 +28,7 @@ class Log {
     print(data);
   }
 
-  static i(Object object) {
+  static void i(Object object) {
     String data = '\x1B[1;44;37m $object \x1B[0m';
     String suffix = '';
     if (!object.toString().endsWith('\n')) {
@@ -38,7 +38,7 @@ class Log {
     print(data);
   }
 
-  static w(Object object) {
+  static void w(Object object) {
     String data = '\x1B[1;43;37m $object \x1B[0m';
     String suffix = '';
     if (!object.toString().endsWith('\n')) {
@@ -48,7 +48,7 @@ class Log {
     print(data);
   }
 
-  static e(Object object) {
+  static void e(Object object) {
     String data = '\x1B[1;41;37m $object \x1B[0m';
     String suffix = '';
     if (!object.toString().endsWith('\n')) {
