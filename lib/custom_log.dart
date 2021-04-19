@@ -18,6 +18,7 @@ class Log {
     //   time: DateTime.now(),
     //   level: 0,
     // );
+    //
     print(data);
   }
 
